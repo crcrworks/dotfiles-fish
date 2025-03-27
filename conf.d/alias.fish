@@ -1,0 +1,17 @@
+alias o="open ."
+alias cl="clear"
+alias nv="nvim"
+alias emacs="emacs -nw"
+alias intel="arch -x86_64 bash"
+alias bb="bartib"
+alias co="colima"
+alias beep="afplay /System/Library/Sounds/Ping.aiff"
+alias killwine="killall -9 wineserver && killall -9 wine64-preloader"
+alias lq="lazysql"
+alias l="clear && ls"
+alias lg="lazygit"
+alias gl="git log --oneline --graph --all"
+alias yt="yt-dlp"
+alias port="lsof"
+
+

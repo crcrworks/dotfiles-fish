@@ -1,1 +1,2 @@
-alias ca="chezmoi apply"
+alias cm="chezmoi"
+alias cma="chezmoi apply"

@@ -1,6 +1,0 @@
-alias nrb="npm run build"
-alias nrw="npm run watch"
-alias nrt="npm run test"
-alias nig="npm install -g"
-alias nid="npm install -D"
-alias pnd="pnpm dev"

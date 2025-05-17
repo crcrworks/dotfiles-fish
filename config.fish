@@ -4,8 +4,7 @@
 fish_vi_key_bindings
 set -g fish_vi_force_cursor 1
 set fish_cursor_default block
-set fish_cursor_insert line
-
+set fish_cursor_insert underscore
 
 # NOTE:
 # -l / --local : force making value local
@@ -17,7 +16,6 @@ set fish_cursor_insert line
 set -U fish_greeting ""
 
 fish_add_path "/Applications/WezTerm.app/Contents/MacOS"
-
 
 # eval "$(rbenv init -)"
 fish_add_path ~/apache-maven-3.8.6/bin/
@@ -31,9 +29,9 @@ fish_add_path $HOME/.cargo/bin
 
 set PATH $PATH /home/asumo/.cargo/bin
 
-set  NODE_OPTIONS --openssl-legacy-provider
-set  DISPLAY :0
-set  autols_cmd eza
+set NODE_OPTIONS --openssl-legacy-provider
+set DISPLAY :0
+set autols_cmd eza
 
 for file in ~/.config/fish/conf.d/**/*.fish
     if test -r "$file"
@@ -50,11 +48,12 @@ end
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /Users/crcr/.ghcup/bin # ghcup-env
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+set -gx PATH $HOME/.cabal/bin $PATH /Users/crcr/.ghcup/bin # ghcup-env
 # Created by `pipx` on 2025-03-17 17:57:27
 set PATH $PATH /Users/crcr/.local/bin
 
 if status is-interactive
-and not set -q TMUX
+    and not set -q TMUX
     exec tmux
 end
